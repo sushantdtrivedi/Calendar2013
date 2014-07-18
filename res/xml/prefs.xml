@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<ListPreference
+    android:title="First Day of Week"
+    android:key="FirstDay"
+    android:summary="Which day you want to start your week?"
+    android:entries="@array/listOfDays"
+    android:entryValues="@array/daysValues" />
+<CheckBoxPreference
+    android:title="Show Tithi"
+    android:defaultValue="true"
+    android:key="showTithi"
+    android:summary="Tithi Details to be shown or not" />
+<CheckBoxPreference
+    android:title="Show Indian Holidays"
+    android:defaultValue="true"
+    android:key="showInd"
+    android:summary="Indian Holidays to be shown or not" />    
+<CheckBoxPreference
+    android:title="Show Other Country's Holidays"
+    android:defaultValue="true"
+    android:key="showInt"
+    android:summary="Holidays for other countries to be shown or not" />
+<ListPreference
+    android:title="Select Country"
+    android:key="intCntry"
+    android:summary="Which country's holiday you want to see?"
+    android:enabled="false"
+    android:entries="@array/listOfCountries"
+    android:entryValues="@array/valOfCountries" />
+
+<EditTextPreference 
+    android:title="Version"
+    android:key="ver"
+    android:enabled="false"
+    android:defaultValue="0.0"
+    android:shouldDisableView="true" />
+
+<EditTextPreference
+    android:title="Developer Options"
+    android:defaultValue=""
+    android:key="dev"
+    android:shouldDisableView="true"
+    android:summary="Do not put anything without developer's advise." />
+</PreferenceScreen>

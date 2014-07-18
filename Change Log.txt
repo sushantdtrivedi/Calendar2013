@@ -1,0 +1,120 @@
+&&&&&&&&&&&&&&&&&&&
+&                 &
+&  Calendar 2013  &
+&                 &
+&&&&&&&&&&&&&&&&&&&
+
+
+=================
+| Version : 0.9 |
+=================
+
+  ----------------------------------
+  | New feature(s) in this version |
+  ----------------------------------
+   - Feedback function now works fine
+
+
+  --------------
+  | Known Bugs |
+  --------------
+   - Display of the details needs refresh
+
+  ----------------------
+  | Upcomming features |
+  ----------------------
+   - Provide better month selection
+   - Possible year selection
+
+  -----------------
+  | Next Features |
+  -----------------
+   - Sign in to google
+   - Canada data
+   - US data
+
+
+=====================
+| Previous versions |
+=====================
+  -----------------
+  | Version : 0.8 |
+  -----------------
+
+   - Logs are now working
+   - The Feedback function is added but not checked
+
+
+  -----------------
+  | Version : 0.7 |
+  -----------------
+
+  New feature(s) in this version |
+   - Today's Date is shown properly when in current month
+
+  Bug Fix(es) in this version |
+   - The splash screen is now showing up even when the app is opened for the first time
+   - Log option is created but not implemented yet
+
+
+  -----------------
+  | Version : 0.6 |
+  -----------------
+
+  New feature(s) in this version |
+   - Landscape display working without data loss
+
+
+  -----------------
+  | Version : 0.5 |
+  -----------------
+
+  New feature(s) in this version |
+   - Splash Screen working with auto transition
+
+
+  -----------------
+  | Version : 0.4 |
+  -----------------
+
+  New feature(s) in this version |
+   - Splash Screen
+
+  Bug Fix(es) in this version |
+   - Selected Date's Colour
+   - Merge the countries tables
+
+
+  -----------------
+  | Version : 0.3 |
+  -----------------
+
+  New feature(s) in this version |
+   - Landscape display Looks different now
+
+  Bug Fix(es) in this version |
+   - Selected Date's Colour
+
+
+  -----------------
+  | Version : 0.2 |
+  -----------------
+
+  New features in that version
+   - Advertisement is now showing up
+
+
+  -----------------
+  | Version : 0.1 |
+  -----------------
+
+  Working features
+   - Portrait display
+   - Add/View Tithi
+   - Add/View Ind
+   - Add/View Aus
+   - Select Begining of the week
+   - Select the data to be viewed
+   - About Page
+   - Awaiting feature Page
+   - Exit

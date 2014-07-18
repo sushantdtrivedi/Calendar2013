@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/rlCalendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:tag="port"
+    tools:context=".Main" >
+
+    <LinearLayout
+        android:id="@+id/llSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/backweektitle"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <Button
+            android:id="@+id/btnFirstMonth"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@drawable/backtitle"
+            android:gravity="center"
+            android:text="@string/textFirstMonth" />
+
+        <Button
+            android:id="@+id/btnPrevMonth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/backtitle"
+            android:gravity="center"
+            android:text="@string/textPrevMonth" />
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:background="@drawable/backtitle"
+            android:gravity="center"
+            android:text="@string/textDateLabel"
+            android:textSize="@dimen/sizeTextMonth" />
+
+        <Button
+            android:id="@+id/btnNextMonth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/backtitle"
+            android:gravity="center"
+            android:text="@string/textNextMonth" />
+
+        <Button
+            android:id="@+id/btnLastMonth"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@drawable/backtitle"
+            android:gravity="center"
+            android:text="@string/textLastMonth" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tlCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSelect"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/backtable"
+        android:padding="1dp" >
+
+        <TableRow
+            android:id="@+id/trWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/backweektitle"
+            android:paddingBottom="1dp" >
+
+            <TextView
+                android:id="@+id/tvWeekDay1"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeekDay2"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeekDay3"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeekDay4"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeekDay5"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeekDay6"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeekDay7"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trWeek1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvWeek1Day1"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek1Day2"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek1Day3"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek1Day4"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek1Day5"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek1Day6"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek1Day7"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trWeek2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvWeek2Day1"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek2Day2"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek2Day3"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek2Day4"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek2Day5"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek2Day6"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek2Day7"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trWeek3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvWeek3Day1"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek3Day2"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek3Day3"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek3Day4"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek3Day5"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek3Day6"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek3Day7"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trWeek4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvWeek4Day1"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek4Day2"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek4Day3"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek4Day4"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek4Day5"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek4Day6"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek4Day7"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trWeek5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvWeek5Day1"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek5Day2"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek5Day3"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek5Day4"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek5Day5"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek5Day6"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek5Day7"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trWeek6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvWeek6Day1"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek6Day2"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek6Day3"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek6Day4"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek6Day5"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek6Day6"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+
+            <TextView
+                android:id="@+id/tvWeek6Day7"
+                android:layout_width="41dp"
+                android:layout_height="30dp"
+                android:background="@drawable/backweekday"
+                android:gravity="right|center_vertical"
+                android:paddingRight="4dp"
+                android:text="@string/textDateLabel"
+                android:textSize="@dimen/sizeTextDate" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@id/tlCalendar"
+        android:layout_alignLeft="@id/tlCalendar"
+        android:layout_below="@id/tlCalendar"
+        android:layout_marginTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello_world"
+                    android:textColor="#5151ff" />
+
+                <TextView
+                    android:id="@+id/tvInd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello_world"
+                    android:textColor="#5151ff" />
+
+                <TextView
+                    android:id="@+id/tvInt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello_world"
+                    android:textColor="#5151ff" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

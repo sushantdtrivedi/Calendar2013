@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    package="com.aceappsdev.calendar2013"
+    android:versionCode="2"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icn"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.aceappsdev.calendar2013.Splash"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.aceappsdev.calendar2013.Main"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.aceappsdev.calendar2013.CAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity android:name="com.aceappsdev.calendar2013.Hol"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.aceappsdev.calendar2013.HOL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.aceappsdev.calendar2013.AboutSush"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.aceappsdev.calendar2013.ABOUTSUSH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.aceappsdev.calendar2013.Feedback"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.aceappsdev.calendar2013.FEEDBACK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.aceappsdev.calendar2013.Prefs"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.aceappsdev.calendar2013.PREFS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.aceappsdev.calendar2013.Awaiting"
+            android:label="@string/action_Google_Sign_In"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.aceappsdev.calendar2013.AWAITING" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+    </application>
+
+</manifest>
